@@ -1,0 +1,861 @@
+@import "colors.scss";
+
+/****************** login **********************/
+.root-page-login { 
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("../img/background.jpg")no-repeat center center fixed;
+    background-size: cover;
+}
+
+.nav-title .logo {
+    margin: 20px;
+    margin-left: 40px;
+    height: 27px;
+}
+
+input[type="text"], input[type="text"]:focus, 
+input[type="password"]:focus, input[type="password"]
+{
+    background: transparent;
+    color: $textColor;
+    border-radius: 50px;
+    height: 40px;
+    margin: 0 0 20px 0;
+}
+
+.registration-input input[type="text"], .registration-input input[type="text"]:focus, 
+.registration-input input[type="password"]:focus, .registration-input input[type="password"]
+{
+    background: transparent;
+    color: $textColorRegistration;
+    border-radius: 50px;
+    height: 40px;
+    margin: 0 0 20px 0;
+}
+
+.input-group-prepend input[type="text"]::placeholder, .input-group-prepend input[type="password"]::placeholder{
+    color: $texthintColor;
+}
+
+.registration-input input[type="text"]::placeholder,.registration-input  input[type="password"]::placeholder{
+    color: $texthintRegColor;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px rgb(1,2,2) inset !important;
+    -webkit-text-fill-color: $textColor !important;
+}
+
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: black !important;
+}
+
+.input-group-prepend{
+    display: flex;
+    height: 40px;
+}
+
+
+.registration-input{
+
+    > .form-control{
+        border-color: $textColor;
+        border-color: $textColorRegistration;
+        color: #323131;
+    }
+} 
+
+.registration-input .form-control:focus{
+    box-shadow: 0 0 0 1px #4943437d !important;
+    border-color: $textColorRegistration !important;
+}
+
+
+
+.input-group{
+    height: 40px;
+    width: 90%;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.input-group-prepend .input-group-text{
+    background: transparent;
+    color: $textColor;
+    border-radius: 50px;  
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;  
+    border-color: $textColor;
+}
+
+.registration-input .input-group-text{
+    background: transparent;
+    border-radius: 50px;  
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;  
+
+    color: $textColorRegistration;
+    border-color: $textColorRegistration;
+}
+
+
+
+
+.container .btn-login {
+    color: $textColor;
+    background-color: $redOoredooColor;
+    border-radius: 50px;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.container .btn-login:hover {
+    color: $textColor;
+    background-color: $darkredOoredooColor;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.container #login-frame {
+    padding: 25px;
+    //margin-top: 3%;
+    box-shadow: 1px 1px 1px rgb(10, 10, 10),
+                -1px -1px 1px rgb(20, 20, 20);
+    text-align: center;
+    background: linear-gradient(rgba(16, 16, 16, 0.1), rgba(16, 16, 16, 0.1));
+    transform: translateY(25%);
+}
+
+.container #login-frame h4 {
+    color: $textColor;
+}
+
+.container #login-frame .area-switch-remember {
+    color: $textColor;
+    padding-top: 5px;
+}
+
+body .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+    background-color: $redOoredooColor !important;
+}
+
+.error-msg {
+    color: red;
+    font-size: 13px;
+    text-align: start;
+    margin-left: 8%;
+    //margin-bottom: 15px;
+}
+
+.novalid-field {
+    box-shadow: 0 0 0 0.5px $borderErrorColor !important;
+    border-color: $borderErrorColor !important;
+}
+
+.field-long-content .error-msg {
+    margin-left: 3% !important;
+}
+
+#login-frame .error-msg {
+    margin-bottom: 15px;
+}
+
+#login-frame .form-control:focus {
+    box-shadow: 0 0 0 1px $textColor !important;
+    border-color: $textColor !important;
+}
+
+/****************** Header **********************/
+.custom-header {
+    background-color: $secondaryBackgroundColor;
+    position: fixed !important;
+    width: 100%;
+    z-index: 10;
+    color: $textColor;
+}
+
+.custom-header .left-nav {
+    margin-inline-start: 2rem;
+}
+
+.custom-header .right-nav {
+    margin-inline-end: 2rem;
+}
+
+.logout-btn:hover {
+    cursor: pointer;
+    color: $redOoredooColor;
+}
+
+.logging-out-loader {
+    color: $redOoredooColor;
+}
+
+.logout-container {
+    width:100%;
+    text-align: center; 
+    margin-top: 5%;
+}
+
+/****************** Mastrer Content **********************/
+.master-content{
+    min-height: 100vh;
+    background-color: $thirdBackgroundColor;
+    display: flex;
+    color: $textColor;
+}
+
+.custom-panel{
+    min-height: 100px;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    background: $primaryBackgroundColor;
+    border-radius: 0.3rem;
+    margin-top: 3rem;
+    padding: 20px;
+}
+
+
+.field-content {
+    margin-bottom: 25px;
+    width: 50%;
+}
+
+.field-long-content {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.btn-content {
+    margin: 0 25%;
+    width: 50%;
+    text-align: center;
+}
+
+
+.custom-btn {
+    color: $textColor !important;
+    background-color: $redOoredooColor !important;
+    border-radius: 50px !important;
+    border-color: $redOoredooColor !important;
+}
+
+.custom-btn:hover {
+    background: $darkredOoredooColor !important;
+    border: 1px solid $darkredOoredooColor !important;
+}
+
+.custom-btn:focus {
+    box-shadow: 0 0 0 1px $darkredOoredooColor !important;
+
+}
+
+.form-content, .detail-content {
+    margin-top: 2rem;
+}
+
+//responsive style
+@media (max-width: 800px) {
+   
+    .container #login-frame {
+        margin-top: 20%;
+    }
+
+    .root-page-login .navbar {
+        display: block !important;
+        text-align: center;
+    }
+
+    .form-content {
+        margin: 0.1rem;
+        padding: 2rem 0rem;
+    }
+
+}
+
+/***************** common ****************/
+.p-inputtext:enabled:focus {
+    box-shadow: 0 0 0 1px $redOoredooColor !important;
+    border-color: $redOoredooColor !important;
+}
+
+.p-inputtext:enabled:hover {
+    border-color: $redOoredooColor !important;
+}
+
+.p-inputtext {
+    border-radius: 5px !important;
+    width: 100%;
+    font-size: 0.9rem !important;
+}
+
+.p-float-label label {
+    color: $texthintColor !important;
+}
+
+.p-checkbox .p-checkbox-box.p-highlight {
+    border-color: $redOoredooColor !important;
+    background: $redOoredooColor !important;
+}
+
+.p-checkbox .p-checkbox-box:not(.p-disabled):hover {
+    border-color: $redOoredooColor !important;
+}
+
+.p-checkbox .p-checkbox-box:not(.p-disabled).p-focus {
+    border-color: $redOoredooColor !important;
+    box-shadow: 0 0 0 1px $redOoredooColor !important;
+}
+
+.p-checkbox-label {
+    color: $textColor !important;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0rem !important;
+    margin-left: 5px;
+}
+
+.field-content .p-dropdown {
+    width: 100%;
+}
+
+.p-dropdown {
+    background: transparent;
+    color: $textColorRegistration;
+    border-radius: 50px;
+    height: 40px;
+    margin: 0 0 20px
+px
+ 0;
+}
+
+.p-dropdown:not(.p-disabled).p-focus {
+    box-shadow: 0 0 0 1px #ECECEC !important;
+    border-color: #000  !important;
+}
+
+.p-dropdown:not(.p-disabled):hover {
+    border-color: #000 !important;
+}
+.p-dropdown:hover::after {
+    border-color: #000 !important;
+}
+
+.p-dropdown:not(.p-disabled).p-focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0.2rem red;
+    border-color: #007bff;
+  }
+
+
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item{
+    color:red;
+  }
+
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item:focus{
+    color:blue;
+  }
+
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item:hover{
+    color:red;
+    background-color: green;
+  }
+
+  
+
+.p-dropdown-panel {
+background: #eeeeee;
+border-radius: 8px;
+}
+
+.p-inputnumber {
+    width: 100%;
+}
+
+.btn:focus, .btn.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.7px $textColor !important;
+}
+
+.p-button {
+    padding: .3rem 1rem !important;
+}
+
+.p-button-rounded {
+    padding: 0 !important;
+}
+
+/** eliminate input number arrows **/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.error{
+    color: red;
+    font-weight: 100;
+    margin: auto;
+    text-align: center;
+    font-size: 13px;
+}
+
+/*** common dialog confirmation ***/
+.confirmation-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm-actions-parent {
+    float: right;
+    margin-top: 1rem;
+}
+
+.confirm-actions-parent #yes-btn {
+    background-color: $redOoredooColor;
+    color: $textColor;
+    border-color: $redOoredooColor;
+}
+
+.confirm-actions-parent #no-btn {
+    color: $redOoredooColor;
+}
+
+.confirm-actions-parent .p-button:focus {
+    box-shadow: 0 0 0 0.5px $textColor !important;
+}
+
+.p-dialog .p-dialog-header .p-dialog-header-icon:focus{
+    box-shadow: 0 0 0 1px $redOoredooColor !important;
+}
+
+// .confirm-actions-parent .p-button.p-button-text:enabled:focus {
+//     background: $thirdBackgroundColor !important;
+// }
+
+.confirm-actions-parent .p-button.p-button-text:enabled:hover {
+    background: $thirdBackgroundColor !important;
+}
+
+/*******************dataTable********************/
+.p-datatable .p-datatable-thead > tr > th {
+    padding: 5px 10px;
+    background-color: $secondaryBackgroundColor;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+    padding: 0 10px!important;
+}
+
+.detail-content .p-datatable .p-datatable-tbody > tr > td {
+    padding: 7px 10px!important;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    background: $redOoredooColor;
+    border-color: $redOoredooColor;
+    color: $textColor;
+}
+
+.p-link:focus {
+    -webkit-box-shadow: 0 0 0 1px $redOoredooColor;
+    box-shadow: 0 0 0 1px $redOoredooColor;
+}
+
+.table-container {
+    margin: 1rem;
+}
+
+.header-table {
+    text-align: left;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.p-datatable .p-datatable-header {
+    padding: 0.7rem 1rem 0.4rem 1rem !important;
+}
+
+.filter-inputtext{
+    border-radius:50px !important;
+}
+
+.p-filter-column{
+    background-color: $thirdBackgroundColor !important;
+    height: 35px !important;
+}
+
+.p-filter-column .p-inputtext {
+    height: 30px !important;
+}
+
+.p-datepicker table td, .p-datepicker .p-timepicker, .p-datepicker .p-datepicker-buttonbar {
+     padding: 0rem; 
+}
+
+.p-datepicker .p-timepicker span {
+     font-size: 0.85rem; 
+}
+
+.p-datatable.p-datatable-hoverable-rows .p-datatable-tbody > tr:not(.p-highlight):hover {
+    //background: rgba(255, 255, 255, 0.13);
+}
+
+.p-datatable .p-sortable-column.p-highlight, 
+.p-datatable .p-sortable-column.p-highlight .p-sortable-column-icon {
+    color: $redOoredooColor !important; 
+}
+
+.p-datatable .p-sortable-column .p-sortable-column-icon {
+    margin-left: 0.2rem !important; width: 1rem!important;
+}
+
+//btn actions
+.table-actions .p-button.p-button-icon-only.p-button-rounded {
+    height: 1.8rem !important;
+    width: 1.8rem !important;
+    margin: 0.3rem !important;
+}
+
+.table-actions .p-button {
+    color: $textColor !important;
+    background-color: $primaryBackgroundColor;
+    border-color: $redOoredooColor !important;
+    font-size: 7px !important;
+}
+
+.table-actions .pi {
+    font-size: 0.8rem !important;
+} 
+
+.table-actions .p-button:hover {
+    color: $textColor !important;
+    background-color: $redOoredooColor;
+    border-color: $redOoredooColor !important;
+}
+
+.table-actions .p-button:focus {
+    box-shadow: 0 0 0 1px $redOoredooColor;
+}
+
+/**************** Dialog Popup *****************/
+
+.p-dialog .p-dialog-header {
+    padding: 1rem !important;
+}
+
+.p-dialog-content {
+    border-block-start: 0.1px dashed $secondaryBackgroundColor;
+    //overflow-y: inherit;
+}
+
+.p-dialog .p-dialog-header .p-dialog-title {
+    font-weight: normal;
+    font-size: 1.25rem;
+    margin-left: 0.6rem;
+}
+
+// .info-label {
+//     color: $darkredOoredooColor;
+// }
+
+
+/****************Footer*****************/
+footer {
+    color: $textColor;
+    background-color: $secondaryBackgroundColor;
+}
+
+
+
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+.main{
+	width: 350px;
+	height: 500px;
+	background: red;
+	overflow: hidden;
+	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+}
+#chk{
+	display: none;
+}
+.login{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+label{
+	color: #fff;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 60px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+input{
+	width: 60%;
+	height: 20px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+button{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #573b8a;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+	background: #6d44b8;
+}
+.signup{
+	height: 460px;
+	background: #eee;
+	border-radius: 60% / 10%;
+	transform: translateY(-180px);
+	transition: .8s ease-in-out;
+}
+.signup label{
+	color: #573b8a;
+	transform: scale(.6);
+}
+
+#chk:checked ~ .signup{
+	transform: translateY(-500px);
+}
+#chk:checked ~ .signup label{
+	transform: scale(1);	
+}
+#chk:checked ~ .login label{
+	transform: scale(.6);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 1.5rem 0 1rem 0;
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.2;
+    color: inherit;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+p {
+    line-height: 1.5;
+    margin: 0 0 1rem 0;
+}
+
+.card {
+    margin-bottom: 2rem;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: rgba(165, 165, 165, 0.1)
+    }
+    50% {
+        background-color: rgba(165, 165, 165, 0.3)
+    }
+    100% {
+        background-color: rgba(165, 165, 165, 0.1)
+    }
+}
+
+.customer-badge {
+    border-radius: 2px;
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+}
+
+.customer-badge.status-qualified {
+    background-color: #C8E6C9;
+    color: #256029;
+}
+
+.customer-badge.status-unqualified {
+    background-color: #FFCDD2;
+    color: #C63737;
+}
+
+.customer-badge.status-negotiation {
+    background-color: #FEEDAF;
+    color: #8A5340;
+}
+
+.customer-badge.status-new {
+    background-color: #B3E5FC;
+    color: #23547B;
+}
+
+.customer-badge.status-renewal {
+    background-color: #ECCFFF;
+    color: #694382;
+}
+
+.customer-badge.status-proposal {
+    background-color: #FFD8B2;
+    color: #805B36;
+}
+
+.product-badge {
+    border-radius: 2px;
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+}
+
+.product-badge.status-instock {
+    background: #C8E6C9;
+    color: #256029;
+}
+
+.product-badge.status-outofstock {
+    background: #FFCDD2;
+    color: #C63737;
+}
+
+.product-badge.status-lowstock {
+    background: #FEEDAF;
+    color: #8A5340;
+}
+
+.order-badge {
+    border-radius: 2px;
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+}
+
+.order-badge.order-delivered {
+    background: #C8E6C9;
+    color: #256029;
+}
+
+.order-badge.order-cancelled {
+    background: #FFCDD2;
+    color: #C63737;
+}
+
+.order-badge.order-pending {
+    background: #FEEDAF;
+    color: #8A5340;
+}
+
+.order-badge.order-returned {
+    background: #ECCFFF;
+    color: #694382;
+}
+
+.image-text {
+    vertical-align: middle;
+    margin-left: .5rem;
+}
+
+.p-multiselect-representative-option {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.p-multiselect-representative-option img {
+    vertical-align: middle;
+    width: 24px;
+}
+
+.p-multiselect-representative-option span {
+    margin-top: .125rem;
+}
+
+.p-column-filter {
+    width: 100%;
+}
+
+.country-item {
+    display: flex;
+    align-items: center;
+}
+
+.country-item img.flag {
+    width: 18px;
+    margin-right: .5rem;
+}
+
+.flag {
+    vertical-align: middle;
+}
+
+span.flag {
+    width:44px;
+    height:30px;
+    display:inline-block;
+}
+
+img.flag {
+    width:30px
+}
+
+
