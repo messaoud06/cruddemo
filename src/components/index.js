@@ -1,3 +1,5 @@
 export * from './login'
 export * from './home'
 export * from './loginnew'
+export * from './loginForm'
+export * from './registerForm'

@@ -6,7 +6,7 @@ const axiosInstance = axios.create();
 axiosInstance.interceptors.request.use(
     async (config) => {
         config.baseURL = process.env.REACT_APP_API_URL+'auth';
-        config.headers.authorization = Helper.getTokenFromStorage();
+        //config.headers.authorization = Helper.getTokenFromStorage();
         config.timeout = 60000;
         return config;
     },

@@ -16,7 +16,9 @@ export const LoginInput = (props) => {
                     value={props.value}
                     placeholder={props.placeholder}
                     onChange={props.onChange}
-                    className="form-control"/>
+                    className="form-control"
+                    
+                    />
             </div>
         </div>
     );
